@@ -5,11 +5,18 @@ import ReactDOM from "react-dom/client";
 
 
 
-const jsxHeading = <h1 className= "head" id="heading"> namaste react using the JSX</h1>
+// const jsxHeading = <h1 className= "head" id="heading"> namaste react using the JSX</h1>
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+// const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(jsxHeading);
+// root.render(jsxHeading);
+
+const Header = ()=>{
+    return <h1>Header component</h1>
+};
+
+
+
 
 
 // const parent = React.createElement("div", { id: "parent" }, [
@@ -22,9 +29,11 @@ root.render(jsxHeading);
 //     React.createElement("h2", {}, "I am an h2 tag"),
 //   ]),
 // ]);
-// const root = ReactDOM.createRoot(document.getElementById("root"));
 
-// root.render(parent);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(<Header />)
+
 
 
 
