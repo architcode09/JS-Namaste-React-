@@ -5,15 +5,19 @@ import ReactDOM from "react-dom/client";
 
 
 
-// const jsxHeading = <h1 className= "head" id="heading"> namaste react using the JSX</h1>
+const jsxHeading = ( 
+    <h1 className= "head" id="heading">
+         namaste react using the JSX
+         </h1>
+    );
 
 // const root = ReactDOM.createRoot(document.getElementById("root"));
 
 // root.render(jsxHeading);
 
-const Header = ()=>{
-    return <h1>Header component</h1>
-};
+// const Header = ()=>{
+//     return <h1>Header component</h1>
+// };
 
 
 
