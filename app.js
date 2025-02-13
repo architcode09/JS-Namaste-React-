@@ -4,12 +4,20 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 
-
-const jsxHeading = ( 
+const elem = <span>React Element</span>;
+const Heading = ()=> ( 
+    
     <h1 className= "head" id="heading">
-         namaste react using the JSX
-         </h1>
+         Namaste react using the JSX
+         
+
+       {elem} {/*writing the element inside the element*/}
+        </h1>
     );
+
+
+
+
 
 // const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -18,6 +26,28 @@ const jsxHeading = (
 // const Header = ()=>{
 //     return <h1>Header component</h1>
 // };
+
+// components in react = normal javascript function which returns some javascript element
+const HeadingComponent = () =>{
+    return(
+    <div id="container">
+        <h2>{100+200}</h2>
+            <Heading/> // heading is another component inside the HeadingComponent i.e called the component composition 
+            <h1 className="heading"> Namaste react React ke  functional component</h1>
+       
+    </div>
+     );
+
+};
+
+const HeadingComponent2 = () => <h1> Namaste react functional component</h1>
+
+
+
+
+
+// 1-> class based components - OLD way
+// 2->functional components - NEW way
 
 
 
@@ -36,7 +66,7 @@ const jsxHeading = (
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<Header />)
+root.render(<HeadingComponent />)
 
 
 

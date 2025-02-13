@@ -1,0 +1,57 @@
+.header {
+    display: flex;
+ 
+    justify-content: space-between; /* this will move the right of logo items to the extreme left*/
+    border: 1px solid black;
+}
+
+.logo {
+    width: 200px;
+}
+.nav-items {
+    display: flex;
+    font-size: 25px;
+
+}
+.nav-items > ul > li  {
+    padding: 10px;
+    margin: 10px;
+}
+
+.nav-items ul li {/*makes the horizontal list to vertical*/
+    display: inline;
+    margin: 10px;
+    padding: 10px;
+}
+
+.res-card {
+   
+    padding: 5px;
+    padding-bottom: 30px;
+    width: 200px;
+    height: 300px;
+    
+    
+    /*overflow: hidden;*/
+}
+.res-card:hover {
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.res-container {
+    display: flex;
+    flex-wrap: wrap;
+    /*this flex wrap will organise the different menu cards and keep them in and well organised manner*/
+    margin: 5px;
+    
+}
+
+.search {
+    padding: 10px;
+    /*padding will keep the extra space from the all sides top,bottom, left ,right*/
+}
+.res-logo {
+    
+    width: 100%;
+}
