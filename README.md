@@ -149,4 +149,47 @@ above heading will get converted to react.createElement automatically when it ge
 
 
 
+# PROPS IN REACT :
+   short form of the  properties , we can pass props to the component in react , here we will need this for the creation of the different menu cards as same RestaurantCard component can not be used to create menu card for all the restaurants So we use props here
 
+   PROPS are just the normal arguments to a function
+
+   NOTE that when i say I am passing props to a function it is same as that i am passing the parameters to a function
+
+
+
+
+# Config driven UI :
+         -"Config-Driven UI is a pattern where the UI structure, content, and behavior are controlled using external configuration files (like JSON or databases) instead of hardcoding everything. This allows companies like Swiggy, Zomato, and Netflix to dynamically change UI based on location, user preferences, or business needs without modifying the codebase."
+
+        - Config-Driven UI allows companies to dynamically change UI elements based on the user's region, preferences, and behavior without hardcoding everything.
+
+        For example, in Swiggy or Zomato:
+
+         A user in Delhi might see North Indian restaurants at the top.
+         A user in Chennai might see South Indian restaurants first.
+         A user in Mumbai might see Maharashtrian dishes as priority.
+
+
+
+
+API MEANING AND API CALL :
+     -Think of an API like a waiter in a restaurant 🍽️.
+      You (the frontend) place an order (request).
+      The waiter (API) takes the order to the kitchen (backend).
+      The kitchen prepares the food (data processing) and gives it to the waiter.
+      The waiter then serves the food to you (response).
+      So, when you  use an API, you're requesting data from a server and receiving a response.
+
+      
+
+
+
+      API_CALL:
+      -An API call means sending a request to a server (backend) from your frontend (React/JavaScript app) to fetch or send data.
+
+         For example, when you open Swiggy:
+
+         The app makes an API call to fetch restaurant data.
+         The API sends back a list of restaurants.
+         The frontend displays the restaurants dynamically.
