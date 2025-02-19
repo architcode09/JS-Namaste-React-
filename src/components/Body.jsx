@@ -1,95 +1,10 @@
-/*
-*Header 
- -- logo
- --Nav items
- *body
- - search
- -restaurant container
-  -restaurantCard
-    -img
-    -Name of res, Star Rating ,cuisines ,delivery time
+import RestaurantCard from "./RestaurantCard";
+import resList from "../../utils/mockData";
+import { useState } from "react";
+// using the useState to create the state variables
 
-*footer
-- copyright
--links
--address
--contact
-*/
-
-import React from "react";
-
-import ReactDOM from "react-dom/client";
-import Burger from "./burger.png";
-
-
-
-
-
-
-
-
-const Header = () => {
-    return (
-        <div className="header">
-            <div className="logo-container">
-
-            <img
-             className="logo" 
-             src={Burger} 
-             alt="Food Logo"
-            />
-
-            </div>
-             
-            <div className="nav-items">
-                <ul>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Contact Us</li>
-                    <li>Cart</li>
-                </ul>
-
-            </div>
-
-        </div>
-    );
-}
-
-
-
-
-const RestaurantCard = (props)=> {
-    // props is a object here 
-    /* this restaurant card is a functional component and functional component in the end is a javascript function*/
-    const { resData} = props;
-    const {
-      cloudinaryImageId,
-      name,
-      avgRating,
-      cuisines,
-      costForTwo,
-      deliveryTime,
-    } = resData?.data;
-
-    return (
-        <div className="res-card" style={{backgroundColor: "#f0f0f0"}}>
-            <img 
-            className="res-logo"
-            alt="res-logo"
-            src= {"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + cloudinaryImageId}/>
-            <h3> {name} </h3>
-            <h4> {cuisines.join(",")} </h4>
-            <h4> {avgRating} stars </h4>
-            <h4> ₹{costForTwo/100} FOR TWO </h4>
-            <h4> {deliveryTime} minutes </h4>
-
-            
-        </div>
-    );
-};
-
-
-const resList = [
+const Body = () => {
+  const [resList, setResList] = useState([
     {
       type: "restaurant",
       data: {
@@ -187,7 +102,8 @@ const resList = [
         rainMode: "NONE",
         thirdPartyAddress: false,
         thirdPartyVendor: "",
-        adTrackingID: "cid=6109309~p=1~eid=00000186-a341-249f-05e6-09c500910178",
+        adTrackingID:
+          "cid=6109309~p=1~eid=00000186-a341-249f-05e6-09c500910178",
         badges: {
           imageBased: [],
           textBased: [],
@@ -574,7 +490,8 @@ const resList = [
         rainMode: "NONE",
         thirdPartyAddress: false,
         thirdPartyVendor: "",
-        adTrackingID: "cid=6108301~p=4~eid=00000186-a341-249f-05e6-09c600910432",
+        adTrackingID:
+          "cid=6108301~p=4~eid=00000186-a341-249f-05e6-09c600910432",
         badges: {
           imageBased: [],
           textBased: [],
@@ -868,7 +785,13 @@ const resList = [
         area: "Koramangala",
         totalRatingsString: "1000+ ratings",
         cloudinaryImageId: "r4ufflqojich0r29efvc",
-        cuisines: ["American", "Snacks", "Turkish", "Portuguese", "Continental"],
+        cuisines: [
+          "American",
+          "Snacks",
+          "Turkish",
+          "Portuguese",
+          "Continental",
+        ],
         tags: [],
         costForTwo: 30000,
         costForTwoString: "₹300 FOR TWO",
@@ -954,7 +877,8 @@ const resList = [
         rainMode: "NONE",
         thirdPartyAddress: false,
         thirdPartyVendor: "",
-        adTrackingID: "cid=6067111~p=7~eid=00000186-a341-249f-05e6-09c70091073f",
+        adTrackingID:
+          "cid=6067111~p=7~eid=00000186-a341-249f-05e6-09c70091073f",
         badges: {
           imageBased: [],
           textBased: [],
@@ -1127,7 +1051,8 @@ const resList = [
           city: "bangalore",
         },
         cityState: "1",
-        address: "14th  Cross, 4th link Road Maruthi Nagar Madiwala Bangalore 68",
+        address:
+          "14th  Cross, 4th link Road Maruthi Nagar Madiwala Bangalore 68",
         locality: "Maruti Nagar",
         parentId: 21798,
         unserviceable: false,
@@ -1318,7 +1243,8 @@ const resList = [
         rainMode: "NONE",
         thirdPartyAddress: false,
         thirdPartyVendor: "",
-        adTrackingID: "cid=6092919~p=10~eid=00000186-a341-249f-05e6-09c800910a41",
+        adTrackingID:
+          "cid=6092919~p=10~eid=00000186-a341-249f-05e6-09c800910a41",
         badges: {
           imageBased: [],
           textBased: [],
@@ -1563,7 +1489,8 @@ const resList = [
         rainMode: "NONE",
         thirdPartyAddress: false,
         thirdPartyVendor: "",
-        adTrackingID: "cid=6090726~p=13~eid=00000186-a341-249f-05e6-09c900910d3a",
+        adTrackingID:
+          "cid=6090726~p=13~eid=00000186-a341-249f-05e6-09c900910d3a",
         badges: {
           imageBased: [],
           textBased: [],
@@ -1972,34 +1899,34 @@ const resList = [
       },
       subtype: "basic",
     },
-];
+  ]);
 
-const Body = () => {
-    return (
-      <div className="body">
-        <div className="search">Search</div>
-        <div className="res-container">
-          {resList.map((restaurant) => (
-            // react says that don't use indexes as the separate keys
-            <RestaurantCard key={restaurant.data.id} resData={restaurant} />
-          ))}
-        </div>
+  return (
+    <div className="body">
+      <div className="filter">
+        <button
+          className="filter-btn"
+          onClick={() => 
+            {
+            const filteredList = resList.filter(
+              (res) => res.data.avgRating > 4
+            );
+            setResList(filteredList);
+          }
+        }
+        >
+          Top Rated Restaurants
+        </button>
       </div>
-    );
-  };
+      <div className="res-container">
+        {/*how is the below function working REVISION*/}
+        {resList.map((restaurant) => (
+          // react says that don't use indexes as the separate keys
+          <RestaurantCard key={restaurant.data.id} resData={restaurant} />
+        ))}
+      </div>
+    </div>
+  );
+};
 
-  
-const AppLayout = () =>{
-    return (
-        <div className="app">
-
-            <Header></Header>
-            <Body></Body>
-
-        </div>
-    )
-}
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(<AppLayout/>);
+export default Body;

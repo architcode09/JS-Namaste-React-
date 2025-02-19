@@ -193,3 +193,30 @@ API MEANING AND API CALL :
          The app makes an API call to fetch restaurant data.
          The API sends back a list of restaurants.
          The frontend displays the restaurants dynamically.
+
+
+
+
+   Two types of export and import :
+       -
+       default export/ import //used when we  have to export and import one component from the single file
+
+       - named export/import // when we have to export or import the multiple components from the dingle file
+
+
+       Note: "We can use both default export and named export in the same React or JavaScript file. "
+      import multiply, { add, subtract } from './utils';
+
+
+
+# REACT HOOKS
+
+     -(Normal js utility functions)
+     -useState() - used to generate superPowerful react variables and keep in mind that useState is used to create state variables
+
+     and useEffects() are the two main utility functions
+
+
+Normal JS variable -> let nameofvariable;
+State variable -> const [nameofvariable] = useState();
+Note whenever the stateVariable  updates react will rerender the component

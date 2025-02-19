@@ -77,9 +77,11 @@
     padding: 10px;
     /*padding will keep the extra space from the all sides top,bottom, left ,right*/
 }
-.res-logo {
-    
-    
+
+.filter-btn{
+    margin: 10px;
+    padding: 5px;
+    cursor: pointer;
 }
 
 
