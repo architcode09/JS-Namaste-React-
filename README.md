@@ -180,7 +180,7 @@ API MEANING AND API CALL :
       The kitchen prepares the food (data processing) and gives it to the waiter.
       The waiter then serves the food to you (response).
       So, when you  use an API, you're requesting data from a server and receiving a response.
-
+     frontend->request->API-> gets data from->backend
       
 
 
@@ -220,3 +220,31 @@ API MEANING AND API CALL :
 Normal JS variable -> let nameofvariable;
 State variable -> const [nameofvariable] = useState();
 Note whenever the stateVariable  updates react will rerender the component
+
+
+
+
+GYAAN KI BAAT;
+  - when we try to fetch the api of a live website we get error that fetch blocked by the CORS policy i.e our browser blocks us
+
+
+
+
+
+const Body = () => {
+  const [resList, setResList/* state variable */] = useState(resListData);
+    /*In React, useState is a hook used to create state variables.
+
+    State variables are variables that React tracks. When their values change, React re-renders 
+    the component to reflect the new data. */
+
+    
+    /*useEffect has two parameters 
+      -1 callback function.
+      -2 dependency array
+      
+      this call back function inside the useEffect is called  after
+      our component renders */
+      useEffect(()=>{
+        fetchData();
+      },[]);

@@ -1,87 +1,215 @@
-*{
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /*to maintain the total width if the webpage and not to exceed the bounds*/
-    overflow-x: hidden;
+    box-sizing: border-box;
+    font-family: "Inter", serif;
 }
 
-
-
-
-
-.header {
-    display: flex;
- 
-    justify-content: space-between; /* this will move the right of logo items to the extreme left*/
-    border: 1px solid rgb(10, 10, 10);
+a {
+    text-decoration: none;
 }
 
-.logo {
-    width: 200px;
-}
-.nav-items {
-    display: flex;
-    font-size: 25px;
-
-}
-.nav-items > ul > li  {
-    padding: 10px;
-    margin: 10px;
+li {
+    list-style: none;
 }
 
-.nav-items ul li {/*makes the horizontal list to vertical*/
-    display: inline;
-    margin: 10px;
-    padding: 10px;
-}
-
-.res-card {
-    padding: 0px;
-    padding-bottom: 30px;
-    width: 200px;
-     /* Set a minimum height instead of a fixed height */
-    column-gap: 20px;
-    margin: 5px;
-
-    /* Let the card expand based on content */
-    display: flex;
-    flex-direction: column;
-    
-     /* Align content to the top */
-}
-
-/* Ensure text inside wraps properly */
-
-
-
-/* Ensure the text inside doesn't overflow */
-.res-card h3, .res-card h4 {
-    text-align: center;
-    word-wrap: break-word;
+img,
+video {
+    display: block;
     max-width: 100%;
 }
 
-.res-card:hover {
+button {
+    border: none;
+    background: #000;
+    color: white;
+    border-radius: 10px;
     cursor: pointer;
-    border: 1px solid black;
+    font-size: 1rem;
 }
 
-.res-container { 
+#root {
     display: flex;
-    flex-wrap: wrap;
-    /*this flex wrap will organise the different menu cards and keep them in and well organised manner*/
-    margin: 5px;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.center {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+    background-color: black;
+}
+
+.logo {
+    height: 60px;
+    border-radius: 50px;
+}
+
+.nav-items ul {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-items ul li a {
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.filter-btn {
+    margin: 20px;
+    width: 250px;
+    height: 60px;
 }
 
 .search {
-    padding: 10px;
-    /*padding will keep the extra space from the all sides top,bottom, left ,right*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.filter-btn{
-    margin: 10px;
-    padding: 5px;
+.search input {
+    font-weight: 400;
+    color: #000;
+    width: 300px;
+    height: 60px;
+    padding: 0 20px;
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0;
+    font-size: 1rem;
+}
+
+.search-btn {
+    color: white;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    width: 150px;
+    height: 60px;
+}
+
+.res-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 50px 0;
+    gap: 30px;
+}
+
+.res-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    align-items: start;
+    width: 300px;
+    transition: all 0.4s ease;
     cursor: pointer;
 }
 
+.res-card:hover {
+    transform: scale(0.98);
+}
 
+.res-logo {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.res-name {
+    font-size: 1rem;
+}
+
+.res-rating {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.res-star {
+    width: 18px;
+}
+
+.res-items {
+    font-size: 0.9rem;
+    color: gray;
+}
+
+.res-location {
+    font-size: 0.9rem;
+    color: gray;
+}
+
+.shimmer-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    margin: 60px 0;
+}
+
+.shimmer-button {
+    width: 300px;
+    height: 60px;
+    padding: 1.2em 2.8em;
+    border-radius: 0.6em;
+    background-color: rgb(206, 206, 206);
+}
+
+.shimmer-container {
+    max-width: 1300px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.shimmer-card {
+    border-radius: 15px;
+    width: 300px;
+    height: 200px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    background-color: rgb(206, 206, 206);
+}
+
+.footer {
+    margin-top: auto;
+    background: #000;
+    color: white;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
